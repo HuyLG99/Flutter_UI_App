@@ -1,3 +1,5 @@
+import 'package:course_app_ui/screens/MovieNeon/home_movie_screen.dart';
+import 'package:course_app_ui/screens/MovieNeon/on_board_screen.dart';
 import 'package:course_app_ui/screens/home_screens.dart';
 import 'package:flutter/material.dart';
 
@@ -17,6 +19,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primaryColor: const Color(0xff29274F),
         ),
-        home: const HomeScreen());
+        home: OnboardingScreen());
   }
 }
