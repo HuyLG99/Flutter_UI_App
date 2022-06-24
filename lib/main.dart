@@ -19,6 +19,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primaryColor: const Color(0xff29274F),
         ),
-        home: OnboardingScreen());
+        home: HomeMovieScreen());
   }
 }

@@ -1,8 +1,12 @@
 import 'dart:ui';
 
+import 'package:course_app_ui/components/masked_image.dart';
+import 'package:course_app_ui/components/search_field_widget.dart';
 import 'package:course_app_ui/core/constant.dart';
+import 'package:course_app_ui/models/movies.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:glassmorphism/glassmorphism.dart';
 
 class HomeMovieScreen extends StatefulWidget {
   const HomeMovieScreen({Key? key}) : super(key: key);
@@ -114,11 +118,11 @@ class _HomeMovieScreenState extends State<HomeMovieScreen> {
                   const SizedBox(
                     height: 30,
                   ),
-                  // const SearchFieldWidget(
-                  //   padding: EdgeInsets.symmetric(
-                  //     horizontal: 20,
-                  //   ),
-                  // ),
+                  const SearchFieldWidget(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 20,
+                    ),
+                  ),
                   const SizedBox(
                     height: 39,
                   ),
@@ -135,37 +139,37 @@ class _HomeMovieScreenState extends State<HomeMovieScreen> {
                   const SizedBox(
                     height: 37,
                   ),
-                  // SizedBox(
-                  //   height: 160,
-                  //   child: ListView.builder(
-                  //     shrinkWrap: true,
-                  //     scrollDirection: Axis.horizontal,
-                  //     itemCount: newMovies.length,
-                  //     itemBuilder: (context, index) {
-                  //       String mask;
-                  //       if (index == 0) {
-                  //         mask = Constants.kMaskFirstIndex;
-                  //       } else if (index == newMovies.length - 1) {
-                  //         mask = Constants.kMaskLastIndex;
-                  //       } else {
-                  //         mask = Constants.kMaskCenter;
-                  //       }
-                  //       return GestureDetector(
-                  //         child: Container(
-                  //           margin: EdgeInsets.only(
-                  //             left: index == 0 ? 20 : 0,
-                  //           ),
-                  //           height: 160,
-                  //           width: 142,
-                  //           child: MaskedImage(
-                  //             asset: newMovies[index].moviePoster,
-                  //             mask: mask,
-                  //           ),
-                  //         ),
-                  //       );
-                  //     },
-                  //   ),
-                  // ),
+                  SizedBox(
+                    height: 160,
+                    child: ListView.builder(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: newMovies.length,
+                      itemBuilder: (context, index) {
+                        String mask;
+                        if (index == 0) {
+                          mask = Constants.kMaskFirstIndex;
+                        } else if (index == newMovies.length - 1) {
+                          mask = Constants.kMaskLastIndex;
+                        } else {
+                          mask = Constants.kMaskCenter;
+                        }
+                        return GestureDetector(
+                          child: Container(
+                            margin: EdgeInsets.only(
+                              left: index == 0 ? 20 : 0,
+                            ),
+                            height: 160,
+                            width: 142,
+                            child: MaskedImage(
+                              asset: newMovies[index].moviePoster,
+                              mask: mask,
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
                   const SizedBox(
                     height: 38,
                   ),
@@ -182,37 +186,37 @@ class _HomeMovieScreenState extends State<HomeMovieScreen> {
                   const SizedBox(
                     height: 37,
                   ),
-                  // SizedBox(
-                  //   height: 160,
-                  //   child: ListView.builder(
-                  //     shrinkWrap: true,
-                  //     scrollDirection: Axis.horizontal,
-                  //     itemCount: upcomingMovies.length,
-                  //     itemBuilder: (context, index) {
-                  //       String mask;
-                  //       if (index == 0) {
-                  //         mask = Constants.kMaskFirstIndex;
-                  //       } else if (index == upcomingMovies.length - 1) {
-                  //         mask = Constants.kMaskLastIndex;
-                  //       } else {
-                  //         mask = Constants.kMaskCenter;
-                  //       }
-                  //       return GestureDetector(
-                  //         child: Container(
-                  //           margin: EdgeInsets.only(
-                  //             left: index == 0 ? 20 : 0,
-                  //           ),
-                  //           height: 160,
-                  //           width: 142,
-                  //           child: MaskedImage(
-                  //             asset: upcomingMovies[index].moviePoster,
-                  //             mask: mask,
-                  //           ),
-                  //         ),
-                  //       );
-                  //     },
-                  //   ),
-                  // ),
+                  SizedBox(
+                    height: 160,
+                    child: ListView.builder(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: upcomingMovies.length,
+                      itemBuilder: (context, index) {
+                        String mask;
+                        if (index == 0) {
+                          mask = Constants.kMaskFirstIndex;
+                        } else if (index == upcomingMovies.length - 1) {
+                          mask = Constants.kMaskLastIndex;
+                        } else {
+                          mask = Constants.kMaskCenter;
+                        }
+                        return GestureDetector(
+                          child: Container(
+                            margin: EdgeInsets.only(
+                              left: index == 0 ? 20 : 0,
+                            ),
+                            height: 160,
+                            width: 142,
+                            child: MaskedImage(
+                              asset: upcomingMovies[index].moviePoster,
+                              mask: mask,
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
                   const SizedBox(
                     height: 16,
                   ),
@@ -262,74 +266,74 @@ class _HomeMovieScreenState extends State<HomeMovieScreen> {
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      // bottomNavigationBar: GlassmorphicContainer(
-      //   width: screenWidth,
-      //   height: 92,
-      //   borderRadius: 0,
-      //   linearGradient: LinearGradient(
-      //     begin: Alignment.topCenter,
-      //     end: Alignment.bottomCenter,
-      //     colors: [
-      //       Constants.kWhiteColor.withOpacity(0.1),
-      //       Constants.kWhiteColor.withOpacity(0.1),
-      //     ],
-      //   ),
-      //   border: 0,
-      //   blur: 30,
-      //   borderGradient: const LinearGradient(
-      //     begin: Alignment.topCenter,
-      //     end: Alignment.bottomCenter,
-      //     colors: [
-      //       Constants.kPinkColor,
-      //       Constants.kGreenColor,
-      //     ],
-      //   ),
-      //   child: BottomAppBar(
-      //     color: Colors.transparent,
-      //     notchMargin: 4,
-      //     elevation: 0,
-      //     child: Row(
-      //       mainAxisAlignment: MainAxisAlignment.center,
-      //       children: [
-      //         Expanded(
-      //           child: IconButton(
-      //             onPressed: () {},
-      //             icon: SvgPicture.asset(
-      //               Constants.kIconHome,
-      //             ),
-      //           ),
-      //         ),
-      //         Expanded(
-      //           child: IconButton(
-      //             onPressed: () {},
-      //             icon: SvgPicture.asset(
-      //               Constants.kIconPlayOnTv,
-      //             ),
-      //           ),
-      //         ),
-      //         const Expanded(
-      //           child: Text(''),
-      //         ),
-      //         Expanded(
-      //           child: IconButton(
-      //             onPressed: () {},
-      //             icon: SvgPicture.asset(
-      //               Constants.kIconCategories,
-      //             ),
-      //           ),
-      //         ),
-      //         Expanded(
-      //           child: IconButton(
-      //             onPressed: () {},
-      //             icon: SvgPicture.asset(
-      //               Constants.kIconDownload,
-      //             ),
-      //           ),
-      //         ),
-      //       ],
-      //     ),
-      //   ),
-      // ),
+      bottomNavigationBar: GlassmorphicContainer(
+        width: screenWidth,
+        height: 92,
+        borderRadius: 0,
+        linearGradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            Constants.kWhiteColor.withOpacity(0.1),
+            Constants.kWhiteColor.withOpacity(0.1),
+          ],
+        ),
+        border: 0,
+        blur: 30,
+        borderGradient: const LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            Constants.kPinkColor,
+            Constants.kGreenColor,
+          ],
+        ),
+        child: BottomAppBar(
+          color: Colors.transparent,
+          notchMargin: 4,
+          elevation: 0,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                child: IconButton(
+                  onPressed: () {},
+                  icon: SvgPicture.asset(
+                    Constants.kIconHome,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: IconButton(
+                  onPressed: () {},
+                  icon: SvgPicture.asset(
+                    Constants.kIconPlayOnTv,
+                  ),
+                ),
+              ),
+              const Expanded(
+                child: Text(''),
+              ),
+              Expanded(
+                child: IconButton(
+                  onPressed: () {},
+                  icon: SvgPicture.asset(
+                    Constants.kIconCategories,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: IconButton(
+                  onPressed: () {},
+                  icon: SvgPicture.asset(
+                    Constants.kIconDownload,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
