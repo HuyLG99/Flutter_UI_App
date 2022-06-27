@@ -1,3 +1,4 @@
+import 'package:course_app_ui/screens/FoodRecipe/onboard_food_screen.dart';
 import 'package:course_app_ui/screens/MovieNeon/home_movie_screen.dart';
 import 'package:course_app_ui/screens/MovieNeon/on_board_screen.dart';
 import 'package:course_app_ui/screens/home_screens.dart';
@@ -19,6 +20,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primaryColor: const Color(0xff29274F),
         ),
-        home: HomeMovieScreen());
+        home: OnboardingScreen());
   }
 }
