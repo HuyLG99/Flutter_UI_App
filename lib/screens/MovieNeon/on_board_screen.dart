@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:course_app_ui/components/custom_outline.dart';
 import 'package:course_app_ui/core/constant.dart';
+import 'package:course_app_ui/screens/MovieNeon/home_movie_screen.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingScreen extends StatelessWidget {
@@ -101,7 +102,7 @@ class OnboardingScreen extends StatelessWidget {
                         image: DecorationImage(
                           fit: BoxFit.cover,
                           alignment: Alignment.bottomLeft,
-                          image: AssetImage('assets/img-onboarding.png'),
+                          image: AssetImage('assets/images/img-onboarding.png'),
                         ),
                       ),
                     ),
@@ -155,12 +156,18 @@ class OnboardingScreen extends StatelessWidget {
                           ],
                         ),
                       ),
-                      child: const Center(
-                        child: Text(
-                          'Sign Up',
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: Constants.kWhiteColor,
+                      child: GestureDetector(
+                        onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const HomeMovieScreen())),
+                        child: const Center(
+                          child: Text(
+                            'Sign Up',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Constants.kWhiteColor,
+                            ),
                           ),
                         ),
                       ),
