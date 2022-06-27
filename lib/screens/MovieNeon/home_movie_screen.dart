@@ -4,6 +4,7 @@ import 'package:course_app_ui/components/masked_image.dart';
 import 'package:course_app_ui/components/search_field_widget.dart';
 import 'package:course_app_ui/core/constant.dart';
 import 'package:course_app_ui/models/movies.dart';
+import 'package:course_app_ui/screens/MovieNeon/movie_detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:glassmorphism/glassmorphism.dart';
@@ -202,6 +203,10 @@ class _HomeMovieScreenState extends State<HomeMovieScreen> {
                           mask = Constants.kMaskCenter;
                         }
                         return GestureDetector(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (contex) => MovieDetailScreen())),
                           child: Container(
                             margin: EdgeInsets.only(
                               left: index == 0 ? 20 : 0,
