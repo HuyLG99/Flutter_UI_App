@@ -1,3 +1,6 @@
+import 'package:course_app_ui/core/doctor_app_theme.dart';
+import 'package:course_app_ui/screens/DoctorApp/detail_doctor_screen.dart';
+import 'package:course_app_ui/screens/DoctorApp/home_screen_doctor.dart';
 import 'package:course_app_ui/screens/FoodRecipe/onboard_food_screen.dart';
 import 'package:course_app_ui/screens/MovieNeon/home_movie_screen.dart';
 import 'package:course_app_ui/screens/MovieNeon/on_board_screen.dart';
@@ -15,11 +18,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          primaryColor: const Color(0xff29274F),
-        ),
-        home: OnboardingScreen());
+      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const HomeScreenDoctor(),
+        '/doctor_details': (context) => const DoctorDetailScreen(),
+      },
+    );
   }
 }

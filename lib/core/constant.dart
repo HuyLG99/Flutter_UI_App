@@ -9,6 +9,21 @@ class Constants {
   static const Color kYellowColor = Color(0xFFF2A33A);
   static const Color kWhiteColor = Color(0xFFFFFFFF);
   static const Color kGreyColor = Color(0xFF767680);
+  static const Color kBlueColor = Color(0xFF4485FD);
+  static const Color kGreenColorDefault = Color(0xFF00CC6A);
+  static const Color kGreenLightColor = Color(0xffCCF5E1);
+  static const Color kRedColor = Color(0xffCC4900);
+  static const Color kRedLightColor = Color(0xffF7E4D9);
+  static const Color kWhiteColorDefault = Color(0xFFFFFFFF);
+  static const Color kBlackColor900 = Color(0xFF25282B);
+  static const Color kBlackColor800 = Color(0xFF404345);
+  static const Color kGreyColor900 = Color(0xFFA0A4A8);
+  static const Color kGreyColor800 = Color(0xFFAAAAAA);
+  static const Color kGreyColor700 = Color(0xFFC4C4C4);
+  static const Color kGreyColor600 = Color(0xFFEAEAEA);
+  static const Color kGreyColor500 = Color(0xFFF6F6F6);
+  static const Color kGreyColor400 = Color(0x50CACCCF);
+  static const Color kYellowColorDefault = Color(0xFFFFE848);
 
   // Constant Icon
   static const String kIconHome = 'assets/svg/icon-home.svg';
